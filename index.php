@@ -18,6 +18,23 @@
         $message = "Veuillez saisir un prix HT";
     }
 
+    $number;
+    $result;
+    $seuil = 20;
+    function multiplyByTwo($number){
+        $result = $number * 2;
+        return $result;
+    }
+
+    if(isset($_POST['number'])){
+        $number = $_POST['number'];       
+        if($number < $seuil){
+            $result = multiplyByTwo($number);
+        }
+        else{
+            $result = $number;
+        }
+    };   
 
    ?>
     
@@ -36,5 +53,13 @@
         <input type="submit" value="Calculer">
     </form>
     <p><?php echo $message ?></p>
+
+    <h1>Multiplicatiopn par 2</h1>
+    <form action="index.php" method="post">
+        <label for="number">Nombre</label>
+        <input type="text" name="number" id="number" value="<?php $number ?>">
+        <input type="submit" value="Calculer">
+    </form>
+    <p><?php echo $result ?></p>
 </body>
 </html>
