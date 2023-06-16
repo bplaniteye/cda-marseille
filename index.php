@@ -36,6 +36,13 @@
         }
     };   
 
+    function displayOddNumbers(){
+        for($i = 0; $i <= 100; $i++){
+            if($i % 2 != 0){
+                echo $i . "<br>";
+            }
+        }
+    }
    ?>
     
     <!DOCTYPE html>
@@ -61,5 +68,8 @@
         <input type="submit" value="Calculer">
     </form>
     <p><?php echo $result ?></p>
+
+    <h1>Nombres impairs</h1>
+    <?php displayOddNumbers() ?>
 </body>
 </html>
