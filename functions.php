@@ -44,6 +44,34 @@
         }
     }
 
+    function displayOddNumbers2(){
+        $i = 0;
+        while($i <= 100){
+            if($i % 2 != 0){
+                echo $i . "<br>";
+            }
+            $i++;
+        }
+    }
+
+    function displayOddNumbers3(){
+        $i = 0;
+        do{
+            if($i % 2 != 0){
+                echo $i . "<br>";
+            }
+            $i++;
+        }while($i <= 100);
+    }
+
+    function displayEvenNumbers(){
+        for($i = 0; $i <= 100; $i++){
+            if($i % 2 == 0){
+                echo $i . "<br>";
+            }
+        }
+    }
+
     function displayEvenNumbers2(){
         $i = 0;
         while($i <= 100){
@@ -53,37 +81,5 @@
             $i++;
         }
     }
-
-   ?>
     
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>CALCUL PRIX TTC</h1>
-    <form action="index.php" method="post">
-        <label for="prixHT">Prix HT</label>
-        <input type="text" name="prixHT" id="prixHT" value="<?php $prixHT ?>">
-        <input type="submit" value="Calculer">
-    </form>
-    <p><?php echo $message ?></p>
-
-    <h1>Multiplicatiopn par 2</h1>
-    <form action="index.php" method="post">
-        <label for="number">Nombre</label>
-        <input type="text" name="number" id="number" value="<?php $number ?>">
-        <input type="submit" value="Calculer">
-    </form>
-    <p><?php echo $result ?></p>
-
-    <h1>Nombres impairs</h1>
-    <?php displayOddNumbers() ?>
-
-    <h1>Nombres pairs</h1>
-    <?php displayEvenNumbers2() ?>
-</body>
-</html>
+   ?>
